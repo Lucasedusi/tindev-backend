@@ -7,13 +7,21 @@ const devSchema = new Schema({ // Estrutura da minha tabela no banco de dados pa
   },
   user: {
     type: String,
-    required: true,
+    required: true, 
   },
   bio: String,
   avatar: {
     type: String,
     required: true,
   },
+  like: [{
+    type: Schema.Types.ObjectId,
+    ref: 'Dev',
+  }],
+  deslike: [{
+    type: Schema.Types.ObjectId,
+    ref: 'Dev',
+  }],
 }, {
   timestamps: true,
 });
