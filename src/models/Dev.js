@@ -14,11 +14,11 @@ const devSchema = new Schema({ // Estrutura da minha tabela no banco de dados pa
     type: String,
     required: true,
   },
-  like: [{
+  likes: [{
     type: Schema.Types.ObjectId,
     ref: 'Dev',
   }],
-  deslike: [{
+  dislikes: [{
     type: Schema.Types.ObjectId,
     ref: 'Dev',
   }],
